@@ -13,6 +13,7 @@
   - Contracts with component blueprints in their pool show Name (Type) eg. `SnowBlind (Cooler)`
 - Hauling contract titles cleaned up and Direct underlined
 - Contracts that award scenario progress (Eg. Return of Xenothreat) show how many points & if they are split
+- Added reputation award amount to all contracts
 ### Mining
 - Hephaestanite (Raw) shortened to Heph (Raw)
 - Mining UI text shortened to avoid crossover with values
