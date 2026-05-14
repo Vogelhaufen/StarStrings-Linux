@@ -1,5 +1,5 @@
 # MrKraken's String Replacements
-### (English) Community Translated .ini for **Star Citizen [Build: sc-alpha-4.8.0_ptu_11817467]**
+### (English) Community Translated .ini for **Star Citizen [Build: sc-alpha-4.8.0_live_11825000]**
 
 # Includes
 ### Contracts
