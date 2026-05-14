@@ -1,21 +1,33 @@
 # MrKraken's String Replacements
-### (English) Community Translated .ini for **Star Citizen [Build: sc-alpha-4.7.2-live_11674325]**
+### (English) Community Translated .ini for **Star Citizen [Build: sc-alpha-4.8.0_live_11825000]**
 
 # Includes
+### Contracts
 - Contracts that award blueprints have the potential pool added to the end of the description
   - Not perfect, but if you want to *search* for contracts/blueprints instead [SCMDB by 🥑Krovax](https://scmdb.net/) can help
 - Contracts that award BP's have `[BP]` in the title
   - `[BP]*` for contracts with shared text and only a specific one awards, which is stated in description
-- Warning prefixes for illegal substances
-- Componenet Type/Size/Grade prefixed to the name (eg.  )
-- Hephaestanite (Raw) shortened to Heph (Raw)
-- Any `item_commodities_raw_` entry that begins "Raw ..." will now be suffixed (Raw) instead
+  - For the same reason, and for regional variations of pools awarded, there can be 2 lists showing.
+    - I've attempted to display these as cleanly as possible, but with it being an automated process there's only so much I can do.
+    - Certain contracts (Like Tactical Strike Groups) have 2 pools that award on completion
+  - Contracts with component blueprints in their pool show Name (Type) eg. `SnowBlind (Cooler)`
 - Hauling contract titles cleaned up and Direct underlined
-- Reformatted the Mining guide journal entry to group ores by rarity
-  - nb. I do not verify that the source journal entry is in any way accurate.
+- Contracts that award scenario progress (Eg. Return of Xenothreat) show how many points & if they are split
+- Added reputation award amount to all contracts
+### Mining
+- Hephaestanite (Raw) shortened to Heph (Raw)
+- Mining UI text shortened to avoid crossover with values
+- Any `item_commodities_raw_` entry that begins "Raw ..." will now be suffixed (Raw) instead
+### Items
+- Warning prefixes `[!]` for illegal substances
+- Componenet Type/Size/Grade prefixed to the name
+  - eg. `Tundra` -> `Mil/1/D Tundra`
 - Type notation prefix for missiles (Thanks to WhisperDark in Discord for suggestion)
   - Eg. `Dominator II Missile` -> `[EM] Dominator II Missile`
-- 
+### Journal
+- Reformatted the Mining guide journal entry to group ores by rarity
+  - nb. I do not verify that the source journal entry is in any way accurate.
+- Added some QoL quick tips to the Refuelling Guide
 
 If you want to use bits from different translation packs you've found, check out [BeltaKoda's web based tool](https://beltakoda.github.io/StarMeld/)
 
