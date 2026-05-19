@@ -1,9 +1,33 @@
-# MrKraken's String Replacements for Linux  
-put starstrings-updater.sh in your Gamedir  
-chmod +x starstrings-udpater.sh  
-sh starstrings-updater.sh  
+# MrKraken's String Replacements for Linux
 
-add "g_language = english" to your USER.CFG  
+## Installation
 
-  
-done
+1. Place the updater script into your game directory:
+
+```bash
+starstrings-updater.sh
+```
+
+2. Make the script executable:
+
+```bash
+chmod +x starstrings-updater.sh
+```
+
+3. Run the updater:
+
+```bash
+sh starstrings-updater.sh
+```
+
+## Configuration
+
+Add the following line to your `USER.CFG` file:
+
+```ini
+g_language = english
+```
+
+## Done
+
+That’s it. The string replacements should now be installed and active.
