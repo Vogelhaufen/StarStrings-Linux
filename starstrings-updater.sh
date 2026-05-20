@@ -6,7 +6,6 @@ BASE_DIR="$HOME/Games/star-citizen/drive_c/Program Files/Roberts Space Industrie
 BRANCH="master"
 
 TARGET_FILE="Data/Localization/english/global.ini"
-USER_CFG="USER.cfg"
 LANG_LINE='g_language = english'
 
 echo "== StarStrings updater =="
@@ -26,14 +25,19 @@ git fetch origin "$BRANCH"
 echo "Downloading $TARGET_FILE ..."
 git checkout "origin/$BRANCH" -- "$TARGET_FILE"
 
-echo "Checking USER.cfg ..."
+echo "Searching for existing USER.cfg ..."
 
-if [ ! -f "$USER_CFG" ]; then
-    echo "$USER_CFG not found, creating it..."
+USER_CFG=$(find . -maxdepth 1 -iname "user.cfg" | head -n 1)
+
+if [ -z "$USER_CFG" ]; then
+    echo "No USER.cfg found, creating one..."
+    USER_CFG="./USER.cfg"
     touch "$USER_CFG"
 fi
 
-if grep -Fxq "$LANG_LINE" "$USER_CFG"; then
+echo "Using config file: $USER_CFG"
+
+if grep -Fxiq "$LANG_LINE" "$USER_CFG"; then
     echo "Language setting already present."
 else
     echo "Adding language setting to $USER_CFG ..."
