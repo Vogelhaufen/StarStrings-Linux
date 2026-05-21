@@ -1,3 +1,4 @@
+  GNU nano 9.0                                                                    starstrings.sh                                                                               
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -22,8 +23,12 @@ fi
 echo "Fetching latest files..."
 git fetch origin "$BRANCH"
 
-echo "Downloading $TARGET_FILE ..."
-git checkout "origin/$BRANCH" -- "$TARGET_FILE"
+if git diff --quiet "origin/$BRANCH" -- "$TARGET_FILE"; then
+    echo "global.ini is up to date."
+else
+    echo "New translation available, updating..."
+    git checkout "origin/$BRANCH" -- "$TARGET_FILE"
+fi
 
 echo "Searching for existing USER.cfg ..."
 
@@ -31,7 +36,7 @@ USER_CFG=$(find . -maxdepth 1 -iname "user.cfg" | head -n 1)
 
 if [ -z "$USER_CFG" ]; then
     echo "No USER.cfg found, creating one..."
-    USER_CFG="./USER.cfg"
+    USER_CFG="USER.cfg"
     touch "$USER_CFG"
 fi
 
