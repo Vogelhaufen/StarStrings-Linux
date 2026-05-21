@@ -1,4 +1,3 @@
-  GNU nano 9.0                                                                    starstrings.sh                                                                               
 #!/usr/bin/env bash
 set -euo pipefail
 
