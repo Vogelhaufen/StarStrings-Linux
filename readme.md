@@ -20,14 +20,6 @@ chmod +x starstrings-updater.sh
 sh starstrings-updater.sh
 ```
 
-## Configuration
-
-Add the following line to your `USER.CFG` file:
-
-```ini
-g_language = english
-```
-
 ## Done
 
 That’s it. The string replacements should now be installed and active.
